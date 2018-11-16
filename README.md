@@ -66,17 +66,17 @@ apt list --installed
 #### Типовые команды nmap: https://www.shellhacks.com/ru/20-nmap-examples/
 
 #### Перенос /home на новый разделов
-1. Добавить в /etc/fstab строки
+1. Добавить в /etc/fstab строки (не заработало, т.к. скорее всего инициализация диска происходит после загрузки):
 ```
 /dev/sda2 /home ext4 defaults,rw 0 1
 /dev/sda3 /var ext4 defaults,rw 0 1
 /dev/sda4 /tmp ext4 defaults,rw 0 1
 ```
-или строки с UUID:
+или строки с UUID (не заработало, т.к. скорее всего инициализация диска происходит после загрузки):
 ```
 UUID=e8d13448-33f9-4192-b325-bc6df5cf4df6 /home ext4 defaults,rw 0 1
 ```
-или в /etc/rc.local строки
+или в /etc/rc.local строки:
 ```
 mount /dev/sda2 /media/home
 mount /dev/sda3 /media/var
