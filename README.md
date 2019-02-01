@@ -1,3 +1,6 @@
+# Password
+WEwYiwp%
+
 #### Монитор ресурсов
 ```
 armbianmonitor -m
